@@ -1,4 +1,4 @@
---*at the initial stage
+/* At the initial stage
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --CREATE DATABASE AND SCHEMAS
 ================================================================================================================================================================================
@@ -32,8 +32,8 @@ This script is intended for development and project setup.
 Running it will reset the database and recreate all schemas.
 
 ============================================================
---if you only want to check the database with desired name then
-  use Datawarehouse;
+--if you only want to check the database is existed with desired name then
+  use database_name;
  */ 
 --check if the database name existed and delete the database
 if Exists(select 1 from sys.databases where name='Datawarehouse')
