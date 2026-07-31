@@ -1,0 +1,22 @@
+                    +----------------+
+                    | dim_customer   |
+                    +----------------+
+                    | customer_key PK|
+                    | customer_id    |
+                    | customer_name  |
+                    | gender         |
+                    | country        |
+                    +----------------+
+                           |
+                           |
+                           |
++----------------+    +----------------+    +----------------+
+| dim_product    |----|  fact_sales    |----| dim_date       |
++----------------+    +----------------+    +----------------+
+| product_key PK |    | sales_key PK   |    | date_key PK    |
+| product_id     |    | order_id       |    | full_date      |
+| product_name   |    | customer_id FK |    | year           |
+| category       |    | product_id FK  |    | month          |
+| cost           |    | quantity       |    | day            |
++----------------+    | sales_amount   |    +----------------+
+                      +----------------+
